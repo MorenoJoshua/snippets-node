@@ -240,7 +240,7 @@ function updateDocument(db) {
   var cityRef = db.collection('cities').doc('DC');
 
   // Set the 'capital' field of the city
-  var updateSingle = cityRef.update({ capital: true });
+  var updateSingle = cityRef.update({ capital: true }, { create: true });
   // [END update_document]
 
   return Promise.all([updateSingle]).then(res => {
