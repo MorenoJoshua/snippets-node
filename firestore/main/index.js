@@ -291,7 +291,7 @@ function updateCreateIfMissing(db) {
 
   var setWithOptions = cityRef.set({
     capital: true
-  }, { merge: true });
+  }, { create: true });
   // [END update_create_if_missing]
 
   return setWithOptions.then(res => {
